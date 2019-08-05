@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://drone-ui.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+bg_color = Color( 0, 0, 0, 0.541176 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 99
+corner_radius_top_right = 99
+corner_radius_bottom_right = 99
+corner_radius_bottom_left = 99
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 274.267 ]
+}
+
+[node name="dalt" type="ProgressBar" parent="."]
+margin_left = 20.0
+margin_top = 430.0
+margin_right = 333.0
+margin_bottom = 444.0
+rect_rotation = -89.9999
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+min_value = -100.0
+percent_visible = false
+
+[node name="ColorRect" type="ColorRect" parent="dalt"]
+margin_left = 152.631
+margin_top = -20.0
+margin_right = 155.631
+margin_bottom = 7.00001
+
+[node name="Label" type="Label" parent="dalt"]
+margin_left = 113.177
+margin_top = -16.0452
+margin_right = 153.177
+margin_bottom = -2.04516
+text = "D.ALT"
+
+[node name="alt" type="ProgressBar" parent="."]
+margin_left = 70.0
+margin_top = 274.0
+margin_right = 227.0
+margin_bottom = 288.0
+rect_rotation = -89.9999
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 10.0
+step = 0.01
+percent_visible = false
+
+[node name="ColorRect" type="ColorRect" parent="alt"]
+margin_left = -3.37823
+margin_top = -19.9997
+margin_right = -0.378235
+margin_bottom = 7.00028
+
+[node name="Label" type="Label" parent="alt"]
+margin_left = -45.6734
+margin_top = -16.0449
+margin_right = -5.67339
+margin_bottom = -2.04488
+text = "ALT"
+align = 2
+
+[node name="Labelq" type="Label" parent="."]
+margin_right = 265.0
+margin_bottom = 313.0
+autowrap = true
+clip_text = true
+
+[node name="Compass" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.5
+margin_top = -70.2093
+margin_right = 69.5
+margin_bottom = 71.7907
+rect_pivot_offset = Vector2( 71.457, 72.6657 )
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "N"
+align = 1
+
+[node name="Circle" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -59.0
+margin_top = -57.7093
+margin_right = 58.0
+margin_bottom = 59.2907
+custom_styles/panel = SubResource( 3 )
+
